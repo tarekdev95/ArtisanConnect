@@ -1,0 +1,34 @@
+import math
+
+
+def haversine_distance(lat1: float, lon1: float, lat2: float, lon2: float) -> float:
+    R = 6371.0
+
+    lat1_rad = math.radians(lat1)
+    lat2_rad = math.radians(lat2)
+    dlat = math.radians(lat2 - lat1)
+    dlon = math.radians(lon2 - lon1)
+
+    a = math.sin(dlat / 2) ** 2 + math.cos(lat1_rad) * math.cos(lat2_rad) * math.sin(dlon / 2) ** 2
+    c = 2 * math.atan2(math.sqrt(a), math.sqrt(1 - a))
+
+    return R * c
+
+
+def filter_artisans_by_radius(
+    artisans: list[dict],
+    user_lat: float,
+    user_lon: float,
+    radius_km: float,
+) -> list[dict]:
+    results = []
+    for artisan in artisans:
+        lat = artisan.get("latitude")
+        lon = artisan.get("longitude")
+        if lat is not None and lon is not None:
+            distance = haversine_distance(user_lat, user_lon, lat, lon)
+            if distance <= radius_km:
+                artisan["distance_km"] = round(distance, 2)
+                results.append(artisan)
+    results.sort(key=lambda a: a["distance_km"])
+    return results
