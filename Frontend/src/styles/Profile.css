@@ -1,0 +1,253 @@
+
+.artisan-page{
+
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:120px 20px 60px;
+}
+
+.artisan-card{
+
+    width:100%;
+    max-width:650px;
+
+    text-align:center;
+
+    color:white;
+}
+
+
+
+.profile-image{
+
+    width:180px;
+    height:180px;
+
+    object-fit:cover;
+
+    border-radius:50%;
+
+    border:5px solid white;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.25);
+
+    margin-bottom:25px;
+
+}
+
+.artisan-card h1{
+
+    font-size:60px;
+
+    color:white;
+
+    margin-bottom:10px;
+
+    line-height:1.1;
+
+}
+
+.artisan-card h3{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:10px;
+
+    font-size:30px;
+
+    color:white;
+
+    margin-bottom:25px;
+
+}
+
+.metier-icon{
+
+    font-size:28px;
+
+}
+
+.artisan-card p{
+
+    font-size:22px;
+
+    margin:12px 0;
+
+    color:#f1f5f9;
+
+}
+
+
+
+.services{
+
+    margin:30px 0;
+
+}
+
+.services p{
+
+    font-size:22px;
+
+    color:white;
+
+}
+
+
+
+.profile-buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+    margin-top:30px;
+
+    margin-bottom:30px;
+
+}
+
+.contact-btn,
+.map-btn{
+
+    width:260px;
+
+    height:60px;
+
+    border:none;
+
+    border-radius:15px;
+
+    cursor:pointer;
+
+    font-size:20px;
+
+    font-weight:bold;
+
+    transition:.3s;
+
+}
+
+.contact-btn{
+
+    background:#2563eb;
+
+    color:white;
+
+}
+
+.contact-btn:hover{
+
+    background:#1d4ed8;
+
+    transform:translateY(-3px);
+
+}
+
+.map-btn{
+
+    background:white;
+
+    color:#2563eb;
+
+}
+
+.map-btn:hover{
+
+    background:#f8fafc;
+
+    transform:translateY(-3px);
+
+}
+
+
+
+.back-btn{
+
+    margin-top:20px;
+
+    width:260px;
+
+    height:55px;
+
+    border-radius:15px;
+
+    border:2px solid white;
+
+    background:transparent;
+
+    color:white;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.back-btn:hover{
+
+    background:white;
+
+    color:#2563eb;
+
+}
+
+
+@media(max-width:768px){
+
+.artisan-card h1{
+
+    font-size:42px;
+
+}
+
+.artisan-card h3{
+
+    font-size:24px;
+
+}
+
+.artisan-card p{
+
+    font-size:18px;
+
+}
+
+.services p{
+
+    font-size:18px;
+
+}
+
+.profile-image{
+
+    width:150px;
+    height:150px;
+
+}
+
+.contact-btn,
+.map-btn,
+.back-btn{
+
+    width:100%;
+
+}
+
+}

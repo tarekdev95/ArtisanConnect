@@ -1,0 +1,108 @@
+
+.cards{
+    width:95%;
+    margin:60px auto;
+
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:35px;
+}
+
+.card-artisan{
+    width:320px;
+    background:#fff;
+    border-radius:20px;
+    padding:30px;
+
+    text-align:center;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.12);
+
+    transition:.3s;
+}
+
+.card-artisan:hover{
+    transform:translateY(-10px);
+    box-shadow:0 18px 35px rgba(0,0,0,.18);
+}
+
+.artisan-img{
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    object-fit:cover;
+    margin:auto;
+    border:5px solid #3498db;
+}
+
+.card-artisan h2{
+    margin-top:20px;
+    color:#3498db;
+    font-size:30px;
+}
+
+
+.card-artisan h4{
+    margin-top:12px;
+    color:#555;
+    font-size:20px;
+}
+
+
+.card-artisan p{
+    margin-top:10px;
+    color:#666;
+    font-size:18px;
+}
+
+
+
+.stars{
+    margin-top:15px;
+    font-size:22px;
+    color:#f1c40f;
+    font-weight:bold;
+}
+
+.stars span{
+    color:#2c3e50;
+    margin-left:8px;
+}
+.card-artisan button{
+    width:200px;
+    height:55px;
+
+    margin-top:25px;
+
+    border:none;
+    border-radius:15px;
+
+    background:#3498db;
+    color:white;
+
+    font-size:18px;
+    font-weight:bold;
+
+    transition:.3s;
+}
+
+.card-artisan button:hover{
+    background:#2980b9;
+    transform:scale(1.05);
+}
+
+
+@media(max-width:768px){
+
+    .cards{
+        width:95%;
+        gap:25px;
+    }
+
+    .card-artisan{
+        width:100%;
+        max-width:350px;
+    }
+
+}
