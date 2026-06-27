@@ -6,9 +6,9 @@ import Login from "./PAGES/Login.jsx";
 import Register from "./PAGES/Register.jsx";
 import Profile from "./PAGES/Profile.jsx";
 import Artisans from "./PAGES/Artisans.jsx";
-import Reservation from "./pages/Reservation";
-import Paiement from "./pages/Paiement";
-import Facture from "./pages/Facture";
+//import Reservation from "./pages/Reservation";
+//import Paiement from "./pages/Paiement";
+//import Facture from "./pages/Facture";
 
 function App() {
   return (
