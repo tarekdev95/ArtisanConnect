@@ -38,5 +38,6 @@ class ArtisanListResponse(ArtisanBase):
     id_utilisateur: int
     note_moyenne: float
     verifie: bool
+    utilisateur: UtilisateurResponse
 
     model_config = {"from_attributes": True}
