@@ -21,9 +21,10 @@ function App() {
           <Route path="/artisans" element={<Artisans />} />
           <Route path="/profile/:id" element={<Profile />} />
           <Route path="/map" element={<Map />} />
-          <Route path="/reservation/:artisanId" element={<Reservation />} />
-          <Route path="/paiement" element={<Paiement />} />
-          <Route path="/facture" element={<Facture />} />
+          {/* TODO: activer quand les pages seront créées */}
+          {/* <Route path="/reservation/:artisanId" element={<Reservation />} /> */}
+          {/* <Route path="/paiement" element={<Paiement />} /> */}
+          {/* <Route path="/facture" element={<Facture />} /> */}
         </Routes>
       </BrowserRouter>
     </AuthProvider>

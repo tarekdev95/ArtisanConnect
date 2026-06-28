@@ -19,7 +19,17 @@ function Dashboard() {
   const [error, setError] = useState("");
 
   useEffect(() => {
-    fetchArtisans();
+    const loadArtisans = async () => {
+      try {
+        const data = await api.artisans.list({});
+        setArtisans(data);
+      } catch (err) {
+        setError(err.message || "Impossible de charger les artisans");
+      } finally {
+        setLoading(false);
+      }
+    };
+    loadArtisans();
   }, []);
 
   const fetchArtisans = async (params = {}) => {

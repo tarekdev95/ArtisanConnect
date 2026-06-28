@@ -11,19 +11,21 @@ function Profile() {
   const [error, setError] = useState("");
 
   useEffect(() => {
-    setLoading(true);
-    setError("");
-
-    Promise.all([
-      api.artisans.get(id),
-      api.avis.forArtisan(id),
-    ])
-      .then(([artisanData, avisData]) => {
+    const fetchProfile = async () => {
+      try {
+        const [artisanData, avisData] = await Promise.all([
+          api.artisans.get(id),
+          api.avis.forArtisan(id),
+        ]);
         setArtisan(artisanData);
         setAvis(avisData);
-      })
-      .catch((err) => setError(err.message || "Artisan introuvable"))
-      .finally(() => setLoading(false));
+      } catch (err) {
+        setError(err.message || "Artisan introuvable");
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchProfile();
   }, [id]);
 
   const getIcon = (specialite) => {
