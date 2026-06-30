@@ -1,20 +1,36 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { api } from "../api/client";
+import SearchBar from "../components/SearchBar";
 import "../App.css";
 
 function Artisans() {
   const [artisans, setArtisans] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
+  const [search, setSearch] = useState("");
+  const [metier, setMetier] = useState("");
 
-  useEffect(() => {
+  const fetchArtisans = (params = {}) => {
+    setLoading(true);
+    setError("");
     api.artisans
-      .list()
+      .list(params)
       .then(setArtisans)
       .catch((err) => setError(err.message || "Impossible de charger les artisans"))
       .finally(() => setLoading(false));
+  };
+
+  useEffect(() => {
+    fetchArtisans();
   }, []);
+
+  const handleSearch = () => {
+    const params = {};
+    if (search) params.ville = search;
+    if (metier) params.specialite = metier;
+    fetchArtisans(params);
+  };
 
   const getIcon = (specialite) => {
     const s = specialite?.toLowerCase() || "";
@@ -35,6 +51,14 @@ function Artisans() {
       </nav>
 
       <h1 className="title-page">Nos Artisans</h1>
+
+      <SearchBar
+        search={search}
+        setSearch={setSearch}
+        metier={metier}
+        setMetier={setMetier}
+        onSearch={handleSearch}
+      />
 
       {error && <p style={{ color: "red", textAlign: "center" }}>{error}</p>}
 
