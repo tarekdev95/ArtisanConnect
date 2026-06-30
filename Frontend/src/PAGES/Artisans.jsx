@@ -24,7 +24,11 @@ function Artisans() {
   };
 
   useEffect(() => {
-    fetchArtisans();
+    api.artisans
+      .list({})
+      .then(setArtisans)
+      .catch((err) => setError(err.message || "Impossible de charger les artisans"))
+      .finally(() => setLoading(false));
   }, []);
 
   const handleSearch = () => {
