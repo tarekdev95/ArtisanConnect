@@ -7,9 +7,10 @@ import Register from "./PAGES/Register.jsx";
 import Profile from "./PAGES/Profile.jsx";
 import Artisans from "./PAGES/Artisans.jsx";
 import Contact from "./PAGES/Contact.jsx";
-//import Reservation from "./pages/Reservation";
+import CommentCaMarche from "./PAGES/CommentCaMarche.jsx";
+import Reservation from "./PAGES/Reservation.jsx";
+import Facture from "./PAGES/Facture.jsx";
 //import Paiement from "./pages/Paiement";
-//import Facture from "./pages/Facture";
 
 function App() {
   return (
@@ -23,10 +24,11 @@ function App() {
           <Route path="/profile/:id" element={<Profile />} />
           <Route path="/map" element={<Map />} />
           <Route path="/contact" element={<Contact />} />
-          {/* TODO: activer quand les pages seront créées */}
-          {/* <Route path="/reservation/:artisanId" element={<Reservation />} /> */}
+          <Route path="/comment-ca-marche" element={<CommentCaMarche />} />
+          <Route path="/reservation/:artisanId" element={<Reservation />} />
+          <Route path="/facture" element={<Facture />} />
+          {/* TODO: activer quand la page sera créée */}
           {/* <Route path="/paiement" element={<Paiement />} /> */}
-          {/* <Route path="/facture" element={<Facture />} /> */}
         </Routes>
       </BrowserRouter>
     </AuthProvider>

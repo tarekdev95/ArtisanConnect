@@ -1,0 +1,52 @@
+.howitworks-page{
+    min-height:100vh;
+}
+
+.howitworks-hero{
+    padding:140px 8% 60px;
+    text-align:center;
+}
+
+.howitworks-hero .section-title{
+    color:#fff;
+    margin-bottom:20px;
+}
+
+.howitworks-hero p{
+    color:#fff;
+    max-width:700px;
+    margin:0 auto;
+    font-size:18px;
+    line-height:1.7;
+    opacity:.9;
+}
+
+.how-section-alt{
+    background:#3498db;
+}
+
+.howitworks-cta{
+    text-align:center;
+    padding:80px 8%;
+}
+
+.howitworks-cta h2{
+    font-size:36px;
+    color:#fff;
+    margin-bottom:25px;
+}
+
+.howitworks-cta button{
+    width:220px;
+    height:55px;
+    border-radius:15px;
+    background:#fff;
+    color:#2563eb;
+    font-size:18px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.howitworks-cta button:hover{
+    transform:scale(1.05);
+}
