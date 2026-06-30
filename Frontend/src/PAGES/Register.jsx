@@ -51,7 +51,9 @@ function Register() {
         {error && <p style={{ color: "red" }}>{error}</p>}
 
         <form onSubmit={handleSubmit}>
+          <label htmlFor="nom">Nom</label>
           <input
+            id="nom"
             type="text"
             placeholder="Nom"
             value={nom}
@@ -60,7 +62,9 @@ function Register() {
           />
           <br /><br />
 
+          <label htmlFor="prenom">Prénom</label>
           <input
+            id="prenom"
             type="text"
             placeholder="Prénom"
             value={prenom}
@@ -69,7 +73,9 @@ function Register() {
           />
           <br /><br />
 
+          <label htmlFor="email">Email</label>
           <input
+            id="email"
             type="email"
             placeholder="Email"
             value={email}
@@ -78,7 +84,9 @@ function Register() {
           />
           <br /><br />
 
+          <label htmlFor="role">Rôle</label>
           <select
+            id="role"
             value={role}
             onChange={(e) => setRole(e.target.value)}
             style={{ padding: "0.5rem", width: "100%" }}
@@ -88,7 +96,9 @@ function Register() {
           </select>
           <br /><br />
 
+          <label htmlFor="motDePasse">Mot de passe</label>
           <input
+            id="motDePasse"
             type="password"
             placeholder="Mot de passe"
             value={motDePasse}
@@ -97,7 +107,9 @@ function Register() {
           />
           <br /><br />
 
+          <label htmlFor="confirmMotDePasse">Confirmer mot de passe</label>
           <input
+            id="confirmMotDePasse"
             type="password"
             placeholder="Confirmer mot de passe"
             value={confirmMotDePasse}

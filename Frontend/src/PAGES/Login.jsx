@@ -35,14 +35,19 @@ function Login() {
         {error && <p style={{ color: "red" }}>{error}</p>}
 
         <form onSubmit={handleSubmit}>
+          <label htmlFor="email">Email</label>
           <input
+            id="email"
             type="email"
             placeholder="Email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
           />
+
+          <label htmlFor="motDePasse">Mot de passe</label>
           <input
+            id="motDePasse"
             type="password"
             placeholder="Mot de passe"
             value={motDePasse}
