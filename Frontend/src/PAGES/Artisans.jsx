@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { api } from "../api/client";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 import SearchBar from "../components/SearchBar";
 import "../App.css";
 
@@ -43,12 +45,7 @@ function Artisans() {
 
   return (
     <div className="dashboard">
-      <nav className="navbar">
-        <h2>ArtisanConnect</h2>
-        <Link to="/">
-          <button>Accueil</button>
-        </Link>
-      </nav>
+      <Navbar />
 
       <h1 className="title-page">Nos Artisans</h1>
 
@@ -84,6 +81,8 @@ function Artisans() {
           ))
         )}
       </div>
+
+      <Footer />
     </div>
   );
 }
