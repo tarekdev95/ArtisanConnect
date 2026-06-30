@@ -4,7 +4,7 @@ function HowItWorks() {
 
   return (
 
-    <section className="how-section">
+    <section className="how-section" id="how">
 
       <h2>Comment ça marche ?</h2>
 

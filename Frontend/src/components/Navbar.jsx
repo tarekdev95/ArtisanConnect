@@ -25,7 +25,7 @@ function Navbar() {
         <li><Link to="/">Accueil</Link></li>
         <li><Link to="/artisans">Artisans</Link></li>
         <li><a href="#how">Comment ça marche</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><Link to="/contact">Contact</Link></li>
       </ul>
 
       <div className="nav-buttons">
