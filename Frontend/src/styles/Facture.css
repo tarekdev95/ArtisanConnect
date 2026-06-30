@@ -3,10 +3,13 @@
     min-height:100vh;
 
     display:flex;
-    justify-content:center;
-    align-items:center;
+    flex-direction:column;
 
-    padding:120px 20px;
+}
+
+.facture-page .footer{
+
+    margin-top:auto;
 
 }
 
@@ -14,6 +17,8 @@
 
     width:100%;
     max-width:650px;
+
+    margin:140px auto 60px;
 
     background:white;
 

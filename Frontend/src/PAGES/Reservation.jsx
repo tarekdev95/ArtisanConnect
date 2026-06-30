@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import { useParams, useNavigate, Link } from "react-router-dom";
 import { useAuth } from "../contexts/AuthContext";
 import { api } from "../api/client";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 import "../styles/Reservation.css";
 
 function Reservation() {
@@ -73,6 +75,8 @@ function Reservation() {
 
   return (
     <div className="reservation-page">
+      <Navbar />
+
       <div className="reservation-card">
         <h1>📅 Réservation</h1>
 
@@ -144,6 +148,8 @@ function Reservation() {
           </button>
         </form>
       </div>
+
+      <Footer />
     </div>
   );
 }

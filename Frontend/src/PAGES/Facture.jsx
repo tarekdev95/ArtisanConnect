@@ -1,4 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 import "../styles/Facture.css";
 
 function Facture() {
@@ -8,6 +10,8 @@ function Facture() {
   if (!reservation) {
     return (
       <div className="facture-page">
+        <Navbar />
+
         <div className="facture-card">
           <h1>🧾 Facture</h1>
           <p>Aucune réservation trouvée.</p>
@@ -15,6 +19,8 @@ function Facture() {
             <button className="home-btn">Retour à l'accueil</button>
           </Link>
         </div>
+
+        <Footer />
       </div>
     );
   }
@@ -37,6 +43,8 @@ function Facture() {
 
   return (
     <div className="facture-page">
+      <Navbar />
+
       <div className="facture-card">
         <h1>🧾 Facture</h1>
 
@@ -60,6 +68,8 @@ function Facture() {
           <button className="home-btn">Retour à l'accueil</button>
         </Link>
       </div>
+
+      <Footer />
     </div>
   );
 }
