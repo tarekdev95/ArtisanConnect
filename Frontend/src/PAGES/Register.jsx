@@ -46,7 +46,7 @@ function Register() {
     <div className="container">
       <div className="card">
         <h1>ArtisanConnect</h1>
-        <p>Inscription</p>
+        <p className="card-subtitle">Inscription</p>
 
         {error && <p style={{ color: "red" }}>{error}</p>}
 

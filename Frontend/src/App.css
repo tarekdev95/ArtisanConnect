@@ -42,6 +42,8 @@ textarea{
   outline:none;
   border:none;
   font-family:inherit;
+  background:#fff;
+  color:#2c3e50;
 }
 
 
@@ -55,6 +57,53 @@ ul{
   width:90%;
   max-width:1400px;
   margin:auto;
+}
+
+
+.card{
+  max-width:420px;
+  margin:60px auto;
+  text-align:center;
+}
+
+.card-subtitle{
+  font-size:2rem;
+  font-weight:600;
+  margin-top:1.8rem;
+  margin-bottom:1.5rem;
+}
+
+.card label{
+  display:block;
+  margin:1.2rem 0 0.4rem;
+  font-weight:600;
+  text-align:left;
+}
+
+.card input,
+.card select{
+  width:100%;
+  padding:0.6rem;
+}
+
+.card button{
+  width:100%;
+  padding:0.9rem;
+  font-size:1.1rem;
+  margin-top:1.5rem;
+  background:#094ee4;
+  color:#fff;
+  border-radius:8px;
+  font-weight:600;
+}
+
+.card button:hover{
+  background:#1d4ed8;
+}
+
+.card button:disabled{
+  background:#93c5fd;
+  cursor:not-allowed;
 }
 
 

@@ -30,7 +30,7 @@ function Login() {
     <div className="container">
       <div className="card">
         <h1>ArtisanConnect</h1>
-        <p>Connexion</p>
+        <p className="card-subtitle">Connexion</p>
 
         {error && <p style={{ color: "red" }}>{error}</p>}
 
